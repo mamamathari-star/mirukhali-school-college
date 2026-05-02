@@ -46,7 +46,7 @@ require_once 'data/notices.php';
                 <div class="msg-area">
                     <h2>সভাপতির বাণী</h2>
                     <img src="<?php echo $base_url; ?>assets/images/president.jpg" class="img-ed" alt="সভাপতির বাণী">
-                    <p>খুব শীঘ্রই আপডেট করা হবে&hellip;&hellip;</p>
+                    <p>মিরুখালি স্কুল এন্ড কলেজ ১৯৩৭ সাল থেকে এই অঞ্চলে শিক্ষার আলো ছড়িয়ে যাচ্ছে। পরিচালনা পর্ষদ সর্বদা প্রতিষ্ঠানের উন্নয়নে কাজ করে যাচ্ছে&hellip;</p>
                     <a class="read-more" href="<?php echo $base_url; ?>president-message.php">More &rarr;</a>
                 </div>
 
@@ -54,7 +54,7 @@ require_once 'data/notices.php';
                 <div class="msg-area">
                     <h2>অধ্যক্ষের বাণী</h2>
                     <img src="<?php echo $base_url; ?>assets/images/vice-principal.png" class="img-ed" alt="অধ্যক্ষের বাণী">
-                    <p>খুব শীঘ্রই আপডেট করা হবে&hellip;</p>
+                    <p>আমাদের লক্ষ্য হলো প্রতিটি শিক্ষার্থীকে জ্ঞান, দক্ষতা ও নৈতিক মূল্যবোধে সমৃদ্ধ করে গড়ে তোলা&hellip;</p>
                     <a class="read-more" href="<?php echo $base_url; ?>principal-message.php">More &rarr;</a>
                 </div>
             </div>

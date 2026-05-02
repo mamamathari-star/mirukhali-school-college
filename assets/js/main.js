@@ -45,7 +45,12 @@ document.addEventListener('DOMContentLoaded', function () {
             e.stopPropagation();
             var subMenu = this.parentElement.querySelector('ul');
             if (subMenu) {
-                subMenu.style.display = subMenu.style.display === 'block' ? 'none' : 'block';
+                subMenu.classList.toggle('open');
+            }
+            var icon = this.querySelector('i');
+            if (icon) {
+                icon.classList.toggle('fa-angle-down');
+                icon.classList.toggle('fa-angle-up');
             }
         });
     });

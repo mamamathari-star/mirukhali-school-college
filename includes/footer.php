@@ -12,7 +12,7 @@
             <button class="gallery-nav prev"><i class="fa fa-chevron-left"></i></button>
             <div class="gallery-track">
                 <?php foreach ($gallery_images as $img): ?>
-                <img src="<?php echo $base_url . $img['file']; ?>" alt="<?php echo $img['title']; ?>">
+                <img src="<?php echo e($base_url . $img['file']); ?>" alt="<?php echo e($img['title']); ?>">
                 <?php endforeach; ?>
             </div>
             <button class="gallery-nav next"><i class="fa fa-chevron-right"></i></button>
@@ -26,14 +26,14 @@
             <h2>প্রতিষ্ঠানের মেইলিং ঠিকানা</h2>
             <div class="textwidget">
                 <p>
-                    মোবাইল নম্বর: <span><?php echo $site['mobile']; ?></span><br>
-                    ই. আই. আই. এন: <span><?php echo $site['eiin']; ?></span><br>
-                    ইমেইল: <span><?php echo $site['email']; ?></span><br>
-                    ওয়েব সাইটঃ <span><?php echo $site['website']; ?></span><br>
-                    কেন্দ্র কোডঃ <?php echo $site['center_code']; ?><br>
-                    ডাকঘরঃ <?php echo $site['post_office']; ?><br>
-                    উপজেলাঃ <?php echo $site['upazila']; ?><br>
-                    জেলাঃ <?php echo $site['district']; ?>
+                    মোবাইল নম্বর: <span><?php echo e($site['mobile']); ?></span><br>
+                    ই. আই. আই. এন: <span><?php echo e($site['eiin']); ?></span><br>
+                    ইমেইল: <span><?php echo e($site['email']); ?></span><br>
+                    ওয়েব সাইটঃ <span><?php echo e($site['website']); ?></span><br>
+                    কেন্দ্র কোডঃ <?php echo e($site['center_code']); ?><br>
+                    ডাকঘরঃ <?php echo e($site['post_office']); ?><br>
+                    উপজেলাঃ <?php echo e($site['upazila']); ?><br>
+                    জেলাঃ <?php echo e($site['district']); ?>
                 </p>
             </div>
         </div>
@@ -41,7 +41,7 @@
             <h2>ফেইসবুকে আমরা</h2>
             <div class="fb-placeholder">
                 <p>আমাদের ফেইসবুক পেইজ দেখুন</p>
-                <a href="<?php echo $site['facebook']; ?>" target="_blank"><i class="fa fa-facebook-square" style="font-size:40px;color:#4267B2;margin-top:10px;"></i></a>
+                <a href="<?php echo e($site['facebook']); ?>" target="_blank"><i class="fa fa-facebook-square" style="font-size:40px;color:#4267B2;margin-top:10px;"></i></a>
                 <p style="margin-top:10px;">মিরুখালী উচ্চ মাধ্যমিক বিদ্যালয়</p>
             </div>
         </div>
@@ -61,11 +61,11 @@
     <!-- Footer Bottom -->
     <div class="useo-footer-bottom" style="width:1120px;margin:0 auto;">
         <p class="copyright-info">
-            কপিরাইট @ <?php echo $site['name_bn']; ?> সর্ব স্বত্ব সংরক্ষণ করে
+            কপিরাইট @ <?php echo e($site['name_bn']); ?> সর্ব স্বত্ব সংরক্ষণ করে
         </p>
         <p class="developer-info">
             <a href="http://www.sikdercomputer.com" target="_blank">
-                <img src="<?php echo $base_url; ?>assets/images/developer-logo.png" alt="Developer Logo">
+                <img src="<?php echo e($base_url); ?>assets/images/developer-logo.png" alt="Developer Logo">
             </a>
         </p>
     </div>
@@ -79,6 +79,6 @@
         <img id="lightbox-img" src="" alt="Gallery Image">
     </div>
 
-    <script src="<?php echo $base_url; ?>assets/js/main.js"></script>
+    <script src="<?php echo e($base_url); ?>assets/js/main.js"></script>
 </body>
 </html>

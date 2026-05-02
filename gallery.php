@@ -4,7 +4,7 @@ require_once 'data/gallery.php';
 require_once 'includes/header.php';
 require_once 'includes/navbar.php';
 
-$selected_cat = isset($_GET['cat']) ? $_GET['cat'] : 'সকল';
+$selected_cat = isset($_GET['cat']) ? htmlspecialchars($_GET['cat'], ENT_QUOTES, 'UTF-8') : 'সকল';
 ?>
 
         <!-- News Ticker -->
@@ -28,7 +28,7 @@ $selected_cat = isset($_GET['cat']) ? $_GET['cat'] : 'সকল';
                         <?php foreach ($gallery_categories as $cat): ?>
                         <a href="?cat=<?php echo urlencode($cat); ?>"
                            style="display:inline-block;padding:5px 15px;margin:3px;background:<?php echo ($selected_cat === $cat) ? '#0e5918' : '#ddd'; ?>;color:<?php echo ($selected_cat === $cat) ? '#fff' : '#333'; ?>;border-radius:3px;font-size:13px;">
-                            <?php echo $cat; ?>
+                            <?php echo e($cat); ?>
                         </a>
                         <?php endforeach; ?>
                     </div>
@@ -38,7 +38,7 @@ $selected_cat = isset($_GET['cat']) ? $_GET['cat'] : 'সকল';
                         <?php foreach ($gallery_images as $img): ?>
                             <?php if ($selected_cat === 'সকল' || $img['category'] === $selected_cat): ?>
                             <div class="gallery-item">
-                                <img src="<?php echo $base_url . $img['file']; ?>" alt="<?php echo $img['title']; ?>">
+                                <img src="<?php echo e($base_url . $img['file']); ?>" alt="<?php echo e($img['title']); ?>">
                             </div>
                             <?php endif; ?>
                         <?php endforeach; ?>

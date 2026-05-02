@@ -27,13 +27,13 @@ require_once 'includes/navbar.php';
                             <?php foreach ($notices as $notice): ?>
                             <div class="notice-card">
                                 <div class="notice-date-big">
-                                    <?php echo $notice['month']; ?><hr><?php echo $notice['year']; ?>
+                                    <?php echo e($notice['month']); ?><hr><?php echo e($notice['year']); ?>
                                 </div>
                                 <div class="notice-info">
-                                    <h3><?php echo $notice['title']; ?></h3>
-                                    <a href="<?php echo $base_url; ?>notice-details.php?id=<?php echo $notice['id']; ?>">বিস্তারিত দেখুন &rarr;</a>
+                                    <h3><?php echo e($notice['title']); ?></h3>
+                                    <a href="<?php echo e($base_url); ?>notice-details.php?id=<?php echo intval($notice['id']); ?>">বিস্তারিত দেখুন &rarr;</a>
                                     <?php if (!empty($notice['file'])): ?>
-                                    <br><a href="<?php echo $notice['file']; ?>" download><i class="fa fa-download"></i> ডাউনলোড</a>
+                                    <br><a href="<?php echo e($notice['file']); ?>" download><i class="fa fa-download"></i> ডাউনলোড</a>
                                     <?php endif; ?>
                                 </div>
                             </div>

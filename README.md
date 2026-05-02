@@ -1,196 +1,158 @@
-# মিরুখালি স্কুল এন্ড কলেজ - Mirukhali School & College
+# মিরুখালী স্কুল এন্ড কলেজ - ওয়েবসাইট
 
-Official website for মিরুখালি স্কুল এন্ড কলেজ (Mirukhali School & College), Mathbaria, Pirojpur.
+Mirukhali School & College - Full PHP Website  
+EIIN: 102726
 
-Built with PHP, HTML, CSS, JavaScript and designed for easy deployment on cPanel/shared hosting.
+## প্রকল্প সম্পর্কে
 
-## Features
+এটি মিরুখালী স্কুল এন্ড কলেজের অফিসিয়াল ওয়েবসাইট প্রকল্প। PHP, HTML, CSS ও JavaScript দিয়ে তৈরি। কোনো ডাটাবেস প্রয়োজন নেই। সরাসরি cPanel/shared hosting এ আপলোড করে ব্যবহার করা যাবে।
 
-- Complete multi-page educational institute website
-- Bangla language support with Noto Sans Bengali font
-- Responsive design (Desktop, Tablet, Mobile)
-- Image slider on homepage
-- Notice board system
-- Photo gallery with category filtering and lightbox
-- Teacher/Staff directory
-- Student class-wise listing
-- Exam result pages
-- Contact page with form
-- Reusable PHP includes (header, navbar, sidebar, footer)
-- Easy data management via PHP array files
+## বৈশিষ্ট্য
 
-## Folder Structure
+- ৫০+ পেইজ সহ সম্পূর্ণ ওয়েবসাইট
+- রেসপন্সিভ ডিজাইন (মোবাইল, ট্যাবলেট, ডেস্কটপ)
+- ফটো গ্যালারি (ক্যাটাগরি ফিল্টার ও লাইটবক্স সহ)
+- নোটিশ বোর্ড সিস্টেম
+- যোগাযোগ ফর্ম (PHP mail)
+- নিউজ টিকার
+- ইমেজ স্লাইডার
+- XSS সুরক্ষা (htmlspecialchars)
+- সাবফোল্ডার সাপোর্ট (auto base_url detection)
 
-```
-/
-├── index.php                    # Homepage
-├── config.php                   # Site configuration
-├── institution-history.php      # Institution history
-├── founder.php                  # Founder info
-├── donor.php                    # Land & money donors
-├── at-a-glance.php              # At a glance
-├── mission-vision.php           # Mission & vision
-├── rules.php                    # Institution rules
-├── manpower.php                 # Manpower structure
-├── permanent-assets.php         # Permanent assets
-├── infrastructure.php           # Physical infrastructure
-├── holiday.php                  # Holiday list
-├── hostel.php                   # Hostel information
-├── transport.php                # Transport
-├── income-source.php            # Income sources
-├── residential.php              # Residential buildings
-├── committee-current.php        # Current committee
-├── committee-previous.php       # Previous committee
-├── president-list.php           # Previous presidents
-├── current-principal.php        # Current principal
-├── teachers.php                 # Current teachers
-├── staff.php                    # Current staff
-├── previous-principals.php      # Previous principals
-├── previous-teachers.php        # Previous teachers
-├── previous-staff.php           # Previous staff
-├── teacher-attendance.php       # Teacher attendance
-├── vacant-posts.php             # Vacant posts
-├── students-class-6.php         # Class 6 students
-├── students-class-7.php         # Class 7 students
-├── students-class-8.php         # Class 8 students
-├── students-class-9.php         # Class 9 students
-├── students-class-10.php        # Class 10 students
-├── students-class-11.php        # Class 11 students
-├── students-class-12.php        # Class 12 students
-├── alumni.php                   # Alumni
-├── academic.php                 # Academic (class-wise students)
-├── attendance.php               # Student attendance
-├── merit-students.php           # Merit students (current)
-├── merit-students-previous.php  # Merit students (previous)
-├── scholarship.php              # Scholarship students
-├── student-cabinet.php          # Student cabinet
-├── gallery.php                  # Photo gallery
-├── class-routine.php            # Class routine
-├── syllabus.php                 # Syllabus
-├── result-jsc.php               # JSC results
-├── result-ssc.php               # SSC results
-├── result-hsc.php               # HSC results
-├── annual-result.php            # Annual exam results
-├── notice.php                   # Notice board
-├── notice-details.php           # Notice details
-├── contact.php                  # Contact page
-├── president-message.php        # President's message
-├── principal-message.php        # Principal's message
-├── search.php                   # Search page
-├── assets/
-│   ├── css/
-│   │   ├── style.css            # Main stylesheet
-│   │   └── responsive.css       # Responsive styles
-│   ├── js/
-│   │   └── main.js              # Main JavaScript
-│   ├── images/                  # Site images
-│   ├── logo/                    # Logo files
-│   ├── gallery/                 # Gallery photos
-│   └── fonts/                   # Custom fonts (if any)
-├── includes/
-│   ├── header.php               # HTML head + top bar
-│   ├── navbar.php               # Navigation menu
-│   ├── sidebar.php              # Right sidebar
-│   ├── footer.php               # Footer + scripts
-│   └── page-template.php        # Generic page template
-├── data/
-│   ├── notices.php              # Notice data array
-│   ├── teachers.php             # Teacher/staff data
-│   ├── students.php             # Student data by class
-│   ├── gallery.php              # Gallery image data
-│   ├── committee.php            # Committee member data
-│   └── links.php                # Important links data
-└── .htaccess                    # Apache config
-```
+## cPanel এ আপলোড করার নিয়ম
 
-## How to Run Locally (XAMPP / Laragon)
+1. **ZIP ফাইলটি ডাউনলোড করুন**
+2. **cPanel → File Manager → public_html ফোল্ডারে যান**
+3. **Upload ক্লিক করে ZIP ফাইলটি আপলোড করুন**
+4. **ZIP ফাইলে রাইট ক্লিক → Extract করুন**
+5. **ওয়েবসাইট রেডি!** yourdomain.com এ ভিজিট করুন
 
-### Using XAMPP:
-1. Download and install [XAMPP](https://www.apachefriends.org/)
-2. Copy the entire project folder to `C:\xampp\htdocs\mssac\`
-3. Start Apache from XAMPP Control Panel
-4. Open browser and go to `http://localhost/mssac/`
+### সাবফোল্ডারে ইনস্টল (public_html/mssac/)
 
-### Using Laragon:
-1. Download and install [Laragon](https://laragon.org/)
-2. Copy the project folder to `C:\laragon\www\mssac\`
-3. Start Laragon
-4. Open browser and go to `http://mssac.test/` or `http://localhost/mssac/`
+1. public_html এর ভেতরে `mssac` নামে ফোল্ডার তৈরি করুন
+2. সব ফাইল `mssac` ফোল্ডারে আপলোড/এক্সট্রাক্ট করুন
+3. yourdomain.com/mssac/ এ ভিজিট করুন
+4. base_url স্বয়ংক্রিয়ভাবে সেট হবে
 
-## How to Upload to cPanel
+## লোকালভাবে চালানোর নিয়ম (XAMPP/Laragon)
 
-1. Log in to your cPanel account
-2. Open **File Manager**
-3. Navigate to `public_html` (or subdomain folder)
-4. Upload all project files (you can zip and upload, then extract)
-5. Make sure `index.php` is in the root of `public_html`
-6. Your website should be live at your domain
+1. XAMPP বা Laragon ইনস্টল করুন
+2. প্রজেক্ট ফোল্ডারটি `htdocs/mssac/` এ কপি করুন
+3. Apache চালু করুন
+4. ব্রাউজারে `http://localhost/mssac/` ভিজিট করুন
 
-## How to Replace Images
+## লোগো পরিবর্তন
 
-1. Go to `assets/images/` folder
-2. Replace the image file with your new image using the **same filename**
-3. For logo: Replace `assets/logo/Mirukhali.png`
-4. For slider: Replace `assets/images/slide-1.jpg`, `slide-2.jpg`, etc.
-5. For gallery: Add/replace images in `assets/gallery/` and update `data/gallery.php`
-6. For principal: Replace `assets/images/principal.png`
+1. নতুন হেডার ইমেজ তৈরি করুন
+2. `assets/logo/Mirukhali.png` ফাইলটি নতুন ইমেজ দিয়ে রিপ্লেস করুন
+3. ফেভিকন: `assets/logo/fevicon.png` রিপ্লেস করুন
 
-## How to Update Notices
+## নোটিশ আপডেট
 
-Edit `data/notices.php` and add new notices to the array:
+`data/notices.php` ফাইল এডিট করুন:
 
 ```php
 $notices = [
     [
-        'id'      => 2,
-        'title'   => 'New Notice Title',
-        'date'    => '2024-01-15',
-        'month'   => 'Jan-15',
-        'year'    => '2024',
-        'content' => 'Notice details here...',
-        'file'    => 'path/to/file.pdf',  // optional
+        'id' => 9,
+        'title' => 'নতুন নোটিশের শিরোনাম',
+        'date' => '১৫ জানুয়ারী, ২০২৫',
+        'month' => 'জানু',
+        'year' => '২০২৫',
+        'content' => 'নোটিশের বিস্তারিত বিবরণ এখানে লিখুন।',
+        'file' => ''
     ],
-    // ... existing notices
+    // ... আগের নোটিশগুলো
 ];
 ```
 
-## How to Update Teachers/Staff/Students Data
+## শিক্ষক তথ্য আপডেট
 
-- **Teachers:** Edit `data/teachers.php` - add entries to `$teachers` array
-- **Staff:** Edit `data/teachers.php` - add entries to `$staff` array
-- **Students:** Edit `data/students.php` - add entries to respective class arrays
-- **Committee:** Edit `data/committee.php` - update committee member arrays
-- **Gallery:** Edit `data/gallery.php` - add image entries to `$gallery_images` array
-- **Links:** Edit `data/links.php` - update link arrays
+`data/teachers.php` ফাইল এডিট করুন:
 
-## How to Update Site Information
+```php
+$teachers = [
+    [
+        'name' => 'শিক্ষকের নাম',
+        'designation' => 'পদবি',
+        'subject' => 'বিষয়',
+        'image' => 'assets/images/teachers/teacher-name.jpg'
+    ],
+    // ...
+];
+```
 
-Edit `config.php` to change:
-- Institution name
-- Phone number
-- Email
-- Address
-- EIIN number
-- Social media links
+## গ্যালারি আপডেট
 
-## Technology Stack
+1. নতুন ছবি `assets/gallery/` ফোল্ডারে রাখুন
+2. `data/gallery.php` ফাইলে এন্ট্রি যোগ করুন:
 
-- PHP (no framework, plain PHP)
-- HTML5
-- CSS3
-- JavaScript (vanilla)
-- Font Awesome 4.7 (icons)
-- Google Fonts (Noto Sans Bengali)
+```php
+$gallery_images = [
+    [
+        'file' => 'assets/gallery/new-photo.jpg',
+        'title' => 'ছবির শিরোনাম',
+        'category' => 'প্রতিষ্ঠান'
+    ],
+    // ...
+];
+```
 
-## Browser Support
+## ছাত্র-ছাত্রী তথ্য আপডেট
 
-- Google Chrome
-- Mozilla Firefox
-- Microsoft Edge
-- Safari
-- Mobile browsers
+`data/students.php` ফাইল এডিট করুন। প্রতিটি শ্রেণীর জন্য আলাদা ডেটা আছে।
 
-## Credits
+## কমিটি তথ্য আপডেট
 
-- Design reference: [mssac.edu.bd](https://mssac.edu.bd/)
-- Original theme by: Sikder Computer
+`data/committee.php` ফাইল এডিট করুন।
+
+## সাইটের সাধারণ তথ্য পরিবর্তন
+
+`config.php` ফাইল এডিট করুন:
+
+```php
+$site = [
+    'name_bn' => 'প্রতিষ্ঠানের নাম',
+    'email' => 'email@example.com',
+    'phone' => '01XXXXXXXXX',
+    // ...
+];
+```
+
+## ফোল্ডার কাঠামো
+
+```
+/
+├── index.php              # হোমপেইজ
+├── config.php             # সাইট কনফিগারেশন
+├── contact.php            # যোগাযোগ ফর্ম
+├── notice.php             # সকল নোটিশ
+├── gallery.php            # ফটো গ্যালারি
+├── assets/
+│   ├── css/               # স্টাইলশিট
+│   ├── js/                # জাভাস্ক্রিপ্ট
+│   ├── images/            # ছবি
+│   ├── logo/              # লোগো
+│   └── gallery/           # গ্যালারি ছবি
+├── includes/
+│   ├── header.php         # হেডার
+│   ├── navbar.php         # নেভিগেশন
+│   ├── sidebar.php        # সাইডবার
+│   ├── footer.php         # ফুটার
+│   └── page-template.php  # পেইজ টেমপ্লেট
+└── data/
+    ├── notices.php         # নোটিশ ডেটা
+    ├── teachers.php        # শিক্ষক ডেটা
+    ├── students.php        # ছাত্র ডেটা
+    ├── committee.php       # কমিটি ডেটা
+    ├── gallery.php         # গ্যালারি ডেটা
+    └── links.php           # লিংক ডেটা
+```
+
+## প্রযুক্তি
+
+- PHP (কোনো ফ্রেমওয়ার্ক ছাড়া)
+- HTML5 / CSS3
+- JavaScript (Vanilla)
+- Font Awesome 4.7
+- Noto Sans Bengali ফন্ট

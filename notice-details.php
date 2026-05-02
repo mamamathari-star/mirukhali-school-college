@@ -33,13 +33,13 @@ require_once 'includes/navbar.php';
                     <h2>নোটিশ বিস্তারিত</h2>
                     <?php if ($notice): ?>
                     <div class="notice-detail-content">
-                        <h2><?php echo $notice['title']; ?></h2>
-                        <p><strong>তারিখ:</strong> <?php echo $notice['date']; ?></p>
+                        <h2><?php echo e($notice['title']); ?></h2>
+                        <p><strong>তারিখ:</strong> <?php echo e($notice['date']); ?></p>
                         <hr style="margin:15px 0;">
-                        <p><?php echo $notice['content']; ?></p>
+                        <p><?php echo e($notice['content']); ?></p>
                         <?php if (!empty($notice['file'])): ?>
                         <p style="margin-top:20px;">
-                            <a href="<?php echo $notice['file']; ?>" download class="read-more" style="float:none;">
+                            <a href="<?php echo e($notice['file']); ?>" download class="read-more" style="float:none;">
                                 <i class="fa fa-download"></i> ফাইল ডাউনলোড করুন
                             </a>
                         </p>
