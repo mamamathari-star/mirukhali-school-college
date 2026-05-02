@@ -70,7 +70,7 @@ $notices = [
     ],
     [
         'id'      => 8,
-        'title'   => 'ওয়েবসাইট নবায়ন বিল',
+        'title'   => 'Website Renew Bill',
         'date'    => '2022-06-25',
         'month'   => 'Jun-25',
         'year'    => '2022',

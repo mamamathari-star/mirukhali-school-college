@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $form_message = 'সঠিক ইমেইল ঠিকানা দিন।';
         $form_status = 'error';
     } else {
-        $to = $site['email'];
+        $to = isset($site['email_real']) ? $site['email_real'] : $site['email'];
         $mail_subject = "ওয়েবসাইট থেকে বার্তা: " . $subject;
         $mail_body  = "নাম: " . $name . "\n";
         $mail_body .= "ইমেইল: " . $email . "\n";
@@ -65,24 +65,24 @@ require_once 'includes/navbar.php';
                     <div style="display:flex;gap:30px;flex-wrap:wrap;padding:20px;">
                         <!-- Contact Info -->
                         <div class="contact-info" style="flex:1;min-width:300px;">
-                            <h3 style="margin-bottom:15px;color:#0e5918;">প্রতিষ্ঠানের ঠিকানা</h3>
-                            <p><i class="fa fa-institution" style="color:#0e5918;margin-right:8px;"></i> <strong><?php echo e($site['name_bn']); ?></strong></p>
-                            <p><i class="fa fa-map-marker" style="color:#0e5918;margin-right:8px;"></i> <?php echo e($site['address_bn']); ?></p>
-                            <p><i class="fa fa-phone" style="color:#0e5918;margin-right:8px;"></i> মোবাইল: <?php echo e($site['mobile']); ?></p>
-                            <p><i class="fa fa-phone" style="color:#0e5918;margin-right:8px;"></i> ফোন: <?php echo e($site['phone']); ?></p>
-                            <p><i class="fa fa-envelope" style="color:#0e5918;margin-right:8px;"></i> ইমেইল: <?php echo e($site['email']); ?></p>
-                            <p><i class="fa fa-globe" style="color:#0e5918;margin-right:8px;"></i> ওয়েবসাইট: <?php echo e($site['website']); ?></p>
-                            <p><i class="fa fa-id-card" style="color:#0e5918;margin-right:8px;"></i> ই. আই. আই. এন: <?php echo e($site['eiin']); ?></p>
+                            <h3 style="margin-bottom:15px;color:#360B6F;">প্রতিষ্ঠানের ঠিকানা</h3>
+                            <p><i class="fa fa-institution" style="color:#360B6F;margin-right:8px;"></i> <strong><?php echo e($site['name_bn']); ?></strong></p>
+                            <p><i class="fa fa-map-marker" style="color:#360B6F;margin-right:8px;"></i> <?php echo e($site['address_bn']); ?></p>
+                            <p><i class="fa fa-phone" style="color:#360B6F;margin-right:8px;"></i> মোবাইল: <?php echo e($site['mobile']); ?></p>
+                            <p><i class="fa fa-phone" style="color:#360B6F;margin-right:8px;"></i> ফোন: <?php echo e($site['phone']); ?></p>
+                            <p><i class="fa fa-envelope" style="color:#360B6F;margin-right:8px;"></i> ইমেইল: <?php echo e($site['email']); ?></p>
+                            <p><i class="fa fa-globe" style="color:#360B6F;margin-right:8px;"></i> ওয়েবসাইট: <?php echo e($site['website']); ?></p>
+                            <p><i class="fa fa-id-card" style="color:#360B6F;margin-right:8px;"></i> ই. আই. আই. এন: <?php echo e($site['eiin']); ?></p>
 
                             <div class="map-container">
-                                <h3 style="margin:20px 0 10px;color:#0e5918;">মানচিত্র</h3>
+                                <h3 style="margin:20px 0 10px;color:#360B6F;">মানচিত্র</h3>
                                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29458.99!2d89.92!3d22.38!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjLCsDIyJzQ4LjAiTiA4OcKwNTUnMTIuMCJF!5e0!3m2!1sbn!2sbd!4v1" allowfullscreen="" loading="lazy"></iframe>
                             </div>
                         </div>
 
                         <!-- Contact Form -->
                         <div class="contact-form" style="flex:1;min-width:300px;">
-                            <h3 style="margin-bottom:15px;color:#0e5918;">মেসেজ পাঠান</h3>
+                            <h3 style="margin-bottom:15px;color:#360B6F;">মেসেজ পাঠান</h3>
                             <form method="post" action="<?php echo e($base_url); ?>contact.php">
                                 <div class="form-group">
                                     <label>আপনার নাম</label>

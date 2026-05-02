@@ -24,19 +24,21 @@ $gallery_images = [
     ['file' => 'assets/gallery/L-3.jpg', 'title' => 'মুক্তিযুদ্ধ কর্নার', 'category' => 'মুক্তিযুদ্ধ'],
     ['file' => 'assets/gallery/L-2.jpg', 'title' => 'মুক্তিযুদ্ধ কর্নার', 'category' => 'মুক্তিযুদ্ধ'],
     ['file' => 'assets/gallery/L-1.jpg', 'title' => 'মুক্তিযুদ্ধ কর্নার', 'category' => 'মুক্তিযুদ্ধ'],
+    ['file' => 'assets/images/slide-5.jpg', 'title' => 'প্রতিষ্ঠান', 'category' => 'প্রতিষ্ঠান'],
     ['file' => 'assets/gallery/13.jpg', 'title' => 'প্রতিষ্ঠান', 'category' => 'প্রতিষ্ঠান'],
     ['file' => 'assets/gallery/12.jpg', 'title' => 'প্রতিষ্ঠান', 'category' => 'প্রতিষ্ঠান'],
+    ['file' => 'assets/gallery/11.jpg', 'title' => 'প্রতিষ্ঠান', 'category' => 'প্রতিষ্ঠান'],
     ['file' => 'assets/gallery/10.jpg', 'title' => 'প্রতিষ্ঠান', 'category' => 'প্রতিষ্ঠান'],
     ['file' => 'assets/gallery/9.jpg', 'title' => 'প্রতিষ্ঠান', 'category' => 'প্রতিষ্ঠান'],
     ['file' => 'assets/gallery/8.jpg', 'title' => 'প্রতিষ্ঠান', 'category' => 'প্রতিষ্ঠান'],
     ['file' => 'assets/gallery/7.jpg', 'title' => 'প্রতিষ্ঠান', 'category' => 'প্রতিষ্ঠান'],
-    ['file' => 'assets/gallery/6.jpg', 'title' => 'প্রতিষ্ঠান', 'category' => 'প্রতিষ্ঠান'],
     ['file' => 'assets/gallery/5.jpg', 'title' => 'প্রতিষ্ঠান', 'category' => 'প্রতিষ্ঠান'],
+    ['file' => 'assets/gallery/6.jpg', 'title' => 'প্রতিষ্ঠান', 'category' => 'প্রতিষ্ঠান'],
     ['file' => 'assets/gallery/4.jpg', 'title' => 'প্রতিষ্ঠান', 'category' => 'প্রতিষ্ঠান'],
     ['file' => 'assets/gallery/3.jpg', 'title' => 'প্রতিষ্ঠান', 'category' => 'প্রতিষ্ঠান'],
     ['file' => 'assets/gallery/2.jpg', 'title' => 'প্রতিষ্ঠান', 'category' => 'প্রতিষ্ঠান'],
     ['file' => 'assets/gallery/1.jpg', 'title' => 'প্রতিষ্ঠান', 'category' => 'প্রতিষ্ঠান'],
-    ['file' => 'assets/gallery/Mathbaria.jpg', 'title' => 'মঠবাড়িয়া', 'category' => 'প্রতিষ্ঠান'],
+    ['file' => 'assets/images/slide-4.jpg', 'title' => 'প্রতিষ্ঠান', 'category' => 'প্রতিষ্ঠান'],
 ];
 
 $gallery_categories = ['সকল', 'সূবর্ণজয়ন্তী', 'মুক্তিযুদ্ধ', 'প্রতিষ্ঠান'];

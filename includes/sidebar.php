@@ -19,7 +19,10 @@ require_once __DIR__ . '/../data/teachers.php';
                     <h2>সদ্য প্রকাশিত নোটিশ</h2>
                     <div class="notice-list-sidebar">
                         <?php
-                        $sidebar_notices = array_slice($notices, 0, 5);
+                        $sidebar_notice = null;
+                        foreach ($notices as $n) { if ($n['title'] === 'Website Renew Bill') { $sidebar_notice = $n; break; } }
+                        if (!$sidebar_notice) { $sidebar_notice = end($notices); }
+                        $sidebar_notices = [$sidebar_notice];
                         foreach ($sidebar_notices as $notice): ?>
                         <div class="notice-item">
                             <div class="notice-date-box">

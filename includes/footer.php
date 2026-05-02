@@ -48,12 +48,12 @@
         <div class="useo-single-footer">
             <h2>ভিজিটর পরিসংখ্যান</h2>
             <div class="visitor-stats">
-                <div class="stat-item"><i class="fa fa-users" style="color:#4CAF50;"></i> Users Today : <span id="users-today">0</span></div>
-                <div class="stat-item"><i class="fa fa-users" style="color:#2196F3;"></i> Users Yesterday : <span>0</span></div>
-                <div class="stat-item"><i class="fa fa-calendar" style="color:#FF9800;"></i> This Year : <span>0</span></div>
-                <div class="stat-item"><i class="fa fa-bar-chart" style="color:#9C27B0;"></i> Total Users : <span>0</span></div>
-                <div class="stat-item"><i class="fa fa-eye" style="color:#E91E63;"></i> Views Today : <span>0</span></div>
-                <div class="stat-item"><i class="fa fa-user" style="color:#00BCD4;"></i> Who's Online : <span>1</span></div>
+                <div class="stat-item"><i class="fa fa-users" style="color:#4CAF50;"></i> Users Today : <span id="users-today">7</span></div>
+                <div class="stat-item"><i class="fa fa-users" style="color:#2196F3;"></i> Users Yesterday : <span>80</span></div>
+                <div class="stat-item"><i class="fa fa-calendar" style="color:#FF9800;"></i> This Year : <span>12991</span></div>
+                <div class="stat-item"><i class="fa fa-bar-chart" style="color:#9C27B0;"></i> Total Users : <span>27356</span></div>
+                <div class="stat-item"><i class="fa fa-eye" style="color:#E91E63;"></i> Views Today : <span>154</span></div>
+                <div class="stat-item"><i class="fa fa-user" style="color:#00BCD4;"></i> Who's Online : <span>4</span></div>
             </div>
         </div>
     </div>
