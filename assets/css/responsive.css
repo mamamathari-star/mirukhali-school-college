@@ -1,0 +1,178 @@
+/* ===================================
+   Responsive Styles
+   মিরুখালী স্কুল এন্ড কলেজ
+   =================================== */
+
+/* Tablet */
+@media screen and (max-width: 1140px) {
+    .useo-topbar,
+    .useo-wrap {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .useo-maincontent {
+        flex-direction: column;
+    }
+
+    .useo-leftside {
+        width: 100%;
+        float: none;
+    }
+
+    .useo-sidebar {
+        width: 100%;
+        float: none;
+    }
+
+    .useo-footer {
+        flex-direction: column;
+    }
+
+    .useo-single-footer {
+        border-right: none;
+        border-bottom: 1px solid #333;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Mobile Menu */
+@media screen and (max-width: 768px) {
+    .useo-topbar {
+        height: auto;
+        padding: 8px 10px;
+    }
+
+    .useo-topbar ul.contatc {
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+
+    .useo-topbar ul.contatc li {
+        font-size: 11px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .stellarnav > ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #0e5918;
+        z-index: 9999;
+    }
+
+    .stellarnav > ul.open {
+        display: flex;
+    }
+
+    .stellarnav > ul > li > a {
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .stellarnav ul ul {
+        position: static;
+        box-shadow: none;
+    }
+
+    .stellarnav ul ul li a {
+        padding-left: 30px;
+    }
+
+    .stellarnav ul ul ul li a {
+        padding-left: 45px;
+    }
+
+    .dropdown-toggle {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 44px;
+        height: 44px;
+        border: none;
+        background: rgba(255,255,255,0.1);
+        color: #fff;
+        font-size: 18px;
+        cursor: pointer;
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .stellarnav > ul > li,
+    .stellarnav ul ul li {
+        position: relative;
+    }
+
+    .mgc-search {
+        display: none;
+    }
+
+    .msg-area .img-ed {
+        float: none;
+        display: block;
+        margin: 10px auto;
+        width: 150px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .useo-footer-bottom {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .person-card {
+        width: 45%;
+    }
+
+    .data-table {
+        font-size: 12px;
+    }
+
+    .data-table th,
+    .data-table td {
+        padding: 6px;
+    }
+}
+
+/* Small Mobile */
+@media screen and (max-width: 480px) {
+    .useo-topbar ul.contatc li {
+        font-size: 10px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gallery-track img {
+        width: 140px;
+        height: 120px;
+    }
+
+    .person-card {
+        width: 90%;
+        margin: 10px auto;
+        display: block;
+    }
+
+    .notice-card {
+        flex-direction: column;
+    }
+
+    .useo-scroll > h2 {
+        font-size: 15px;
+    }
+}

@@ -1,0 +1,84 @@
+<?php require_once __DIR__ . '/../config.php'; ?>
+
+    </div>
+    <!-- /useo-wrap -->
+
+    <!-- Photo Gallery Section -->
+    <?php if (!isset($hide_gallery) || !$hide_gallery): ?>
+    <?php require_once __DIR__ . '/../data/gallery.php'; ?>
+    <div class="useo-scroll" style="width:1120px;margin:0 auto;background:#fff;box-shadow:0 0.5px 20px rgba(0,0,0,.4);">
+        <h2>PHOTO GALLERY</h2>
+        <div class="gallery-slider">
+            <button class="gallery-nav prev"><i class="fa fa-chevron-left"></i></button>
+            <div class="gallery-track">
+                <?php foreach ($gallery_images as $img): ?>
+                <img src="<?php echo $base_url . $img['file']; ?>" alt="<?php echo $img['title']; ?>">
+                <?php endforeach; ?>
+            </div>
+            <button class="gallery-nav next"><i class="fa fa-chevron-right"></i></button>
+        </div>
+    </div>
+    <?php endif; ?>
+
+    <!-- Footer -->
+    <div class="useo-footer" style="width:1120px;margin:0 auto;">
+        <div class="useo-single-footer">
+            <h2>প্রতিষ্ঠানের মেইলিং ঠিকানা</h2>
+            <div class="textwidget">
+                <p>
+                    মোবাইল নম্বর: <span><?php echo $site['mobile']; ?></span><br>
+                    ই. আই. আই. এন: <span><?php echo $site['eiin']; ?></span><br>
+                    ইমেইল: <span><?php echo $site['email']; ?></span><br>
+                    ওয়েব সাইটঃ <span><?php echo $site['website']; ?></span><br>
+                    কেন্দ্র কোডঃ <?php echo $site['center_code']; ?><br>
+                    ডাকঘরঃ <?php echo $site['post_office']; ?><br>
+                    উপজেলাঃ <?php echo $site['upazila']; ?><br>
+                    জেলাঃ <?php echo $site['district']; ?>
+                </p>
+            </div>
+        </div>
+        <div class="useo-single-footer">
+            <h2>ফেইসবুকে আমরা</h2>
+            <div class="fb-placeholder">
+                <p>আমাদের ফেইসবুক পেইজ দেখুন</p>
+                <a href="<?php echo $site['facebook']; ?>" target="_blank"><i class="fa fa-facebook-square" style="font-size:40px;color:#4267B2;margin-top:10px;"></i></a>
+                <p style="margin-top:10px;">মিরুখালী উচ্চ মাধ্যমিক বিদ্যালয়</p>
+            </div>
+        </div>
+        <div class="useo-single-footer">
+            <h2>ভিজিটর পরিসংখ্যান</h2>
+            <div class="visitor-stats">
+                <div class="stat-item"><i class="fa fa-users" style="color:#4CAF50;"></i> Users Today : <span id="users-today">0</span></div>
+                <div class="stat-item"><i class="fa fa-users" style="color:#2196F3;"></i> Users Yesterday : <span>0</span></div>
+                <div class="stat-item"><i class="fa fa-calendar" style="color:#FF9800;"></i> This Year : <span>0</span></div>
+                <div class="stat-item"><i class="fa fa-bar-chart" style="color:#9C27B0;"></i> Total Users : <span>0</span></div>
+                <div class="stat-item"><i class="fa fa-eye" style="color:#E91E63;"></i> Views Today : <span>0</span></div>
+                <div class="stat-item"><i class="fa fa-user" style="color:#00BCD4;"></i> Who's Online : <span>1</span></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="useo-footer-bottom" style="width:1120px;margin:0 auto;">
+        <p class="copyright-info">
+            কপিরাইট @ <?php echo $site['name_bn']; ?> সর্ব স্বত্ব সংরক্ষণ করে
+        </p>
+        <p class="developer-info">
+            <a href="http://www.sikdercomputer.com" target="_blank">
+                <img src="<?php echo $base_url; ?>assets/images/developer-logo.png" alt="Developer Logo">
+            </a>
+        </p>
+    </div>
+
+    <!-- Scroll to Top -->
+    <a href="#" class="cd-top">Top</a>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+        <span class="close-btn">&times;</span>
+        <img id="lightbox-img" src="" alt="Gallery Image">
+    </div>
+
+    <script src="<?php echo $base_url; ?>assets/js/main.js"></script>
+</body>
+</html>
