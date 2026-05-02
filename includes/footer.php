@@ -6,7 +6,7 @@
     <!-- Photo Gallery Section -->
     <?php if (!isset($hide_gallery) || !$hide_gallery): ?>
     <?php require_once __DIR__ . '/../data/gallery.php'; ?>
-    <div class="useo-scroll" style="width:1120px;margin:0 auto;background:#fff;box-shadow:0 0.5px 20px rgba(0,0,0,.4);">
+    <div class="useo-scroll">
         <h2>PHOTO GALLERY</h2>
         <div class="gallery-slider">
             <button class="gallery-nav prev"><i class="fa fa-chevron-left"></i></button>
@@ -21,7 +21,7 @@
     <?php endif; ?>
 
     <!-- Footer -->
-    <div class="useo-footer" style="width:1120px;margin:0 auto;">
+    <div class="useo-footer">
         <div class="useo-single-footer">
             <h2>প্রতিষ্ঠানের মেইলিং ঠিকানা</h2>
             <div class="textwidget">
@@ -59,7 +59,7 @@
     </div>
 
     <!-- Footer Bottom -->
-    <div class="useo-footer-bottom" style="width:1120px;margin:0 auto;">
+    <div class="useo-footer-bottom">
         <p class="copyright-info">
             কপিরাইট @ <?php echo e($site['name_bn']); ?> সর্ব স্বত্ব সংরক্ষণ করে
         </p>

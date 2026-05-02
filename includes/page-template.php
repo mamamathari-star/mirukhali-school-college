@@ -20,7 +20,7 @@ require_once __DIR__ . '/navbar.php';
 
         <!-- Main Content Area -->
         <div class="useo-maincontent">
-            <div class="useo-leftside" style="width:100%;">
+            <div class="useo-leftside">
                 <div class="useo-leftside-otherpage">
                     <h2><?php echo $page_title; ?></h2>
                     <div class="page-content">
@@ -28,6 +28,7 @@ require_once __DIR__ . '/navbar.php';
                     </div>
                 </div>
             </div>
+            <?php require_once __DIR__ . '/sidebar.php'; ?>
         </div>
 
 <?php
