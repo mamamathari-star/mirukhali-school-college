@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0">
     <link rel="shortcut icon" type="image/png" href="<?php echo $base_url; ?>assets/logo/fevicon.png"/>
-    <title><?php echo isset($page_title) ? $page_title . ' - ' : ''; ?><?php echo $site['name_bn']; ?></title>
+    <title><?php echo !empty($page_title) ? $page_title . ' - ' : ''; ?><?php echo $site['name_bn']; ?></title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="<?php echo $base_url; ?>assets/css/style.css">
     <link rel="stylesheet" href="<?php echo $base_url; ?>assets/css/responsive.css">
