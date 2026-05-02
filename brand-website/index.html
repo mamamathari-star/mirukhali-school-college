@@ -1070,7 +1070,7 @@
       right: 0;
       bottom: 0;
       background: rgba(0,0,0,0.95);
-      z-index: 999;
+      z-index: 1001;
       flex-direction: column;
       align-items: center;
       justify-content: center;
@@ -1654,7 +1654,7 @@
     <div class="container">
       <h2 class="cta-section__title reveal glow-text">Let's Create<br/>Together</h2>
       <p class="cta-section__desc reveal">Got a project or event in mind? I reply within 24 hours. Let's make music happen.</p>
-      <div class="contact-form reveal">
+      <form class="contact-form reveal" onsubmit="handleFormSubmit(event)">
         <div class="form-group">
           <input type="text" placeholder="Your Name *" required />
         </div>
@@ -1668,7 +1668,7 @@
           <textarea placeholder="Tell me about your project or event *" required></textarea>
         </div>
         <button type="submit" class="btn-pill" style="width: 100%; justify-content: center; margin-top: 8px;">Send Message</button>
-      </div>
+      </form>
     </div>
   </section>
 
@@ -1740,6 +1740,25 @@
       });
     }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
     reveals.forEach(function (el) { revealObserver.observe(el); });
+
+    // Form Submit Handler
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      var form = e.target;
+      var btn = form.querySelector('button[type="submit"]');
+      btn.textContent = 'Sending...';
+      btn.disabled = true;
+      setTimeout(function () {
+        btn.textContent = 'Message Sent!';
+        btn.style.background = '#00c853';
+        form.reset();
+        setTimeout(function () {
+          btn.textContent = 'Send Message';
+          btn.style.background = '';
+          btn.disabled = false;
+        }, 3000);
+      }, 1500);
+    }
 
     // Counter Animation
     var counters = document.querySelectorAll('.counter');
