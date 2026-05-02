@@ -1,0 +1,10 @@
+<?php
+$query = isset($_GET['q']) ? trim($_GET['q']) : '';
+$safe_query = htmlspecialchars($query, ENT_QUOTES, 'UTF-8');
+$page_title = 'অনুসন্ধান: ' . $safe_query;
+$page_content = '
+<p>আপনি অনুসন্ধান করেছেন: <strong>' . $safe_query . '</strong></p>
+<p>অনুসন্ধান ফলাফল এখানে প্রদর্শিত হবে।</p>
+<p>দয়া করে মেনু থেকে পৃষ্ঠা নির্বাচন করুন।</p>
+';
+require_once 'includes/page-template.php';
